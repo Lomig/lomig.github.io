@@ -29,7 +29,7 @@ Our script will:
 
 Here is the implementation:
 
-```OCaml
+```ocaml
 open Lwt.Syntax
 
 let system_to_version () =
@@ -99,7 +99,7 @@ Update your `dune` file to include this new script:
 {: file="bin/dune" }
 
 Run the script to download the Tailwind CSS binary:
-```Console
+```console
 dune exec tailwind_download /a_path/somewhere
 ```
 > [commit 1f77e79](https://github.com/Lomig/quest_complete/tree/1f77e7901eded97f5af8407b1b68cdc2de2e85d8)
@@ -131,7 +131,7 @@ This rule ensures that:
 3. The rule only runs if the binary is missing (`(mode fallback)`).
 
 Build the project:
-```Console
+```console
 dune build
 ```
 > [commit 320c2c1](https://github.com/Lomig/quest_complete/tree/320c2c1e7ad43975d914845ceaee9b086e3d379e)
@@ -176,14 +176,14 @@ Update the dune file to include a rule for compiling CSS:
 
 To be able to test it, let's add a Tailwind class to our Hello World, and make use of the generated CSS file.
 
-```HTML
+```html
 let render _ =
 <p class="text-red-400">Hello world!</p>
 ```
 {: file="server/templates/pages/homepage.eml.html" }
 
 
-```HTML
+```html
 let layout ?(title="QuestComplete") content =
 <!DOCTYPE html>
 <html>
@@ -220,7 +220,7 @@ let routes =
 
 Now, you can use Tailwind CSS classes in your templates and see the changes reflected in your application.
 
-```Console
+```console
 dune build
 dune exec quest_complete
 ```
@@ -229,7 +229,7 @@ dune exec quest_complete
 
 ## Far Away, far away from Rails...
 That's a lot of boilerplate. For reference, adding Tailwind (using the CLI too) to a Rails Project after its init looks like this:
-```Console
+```console
 bundle add tailwindcss-rails
 rails tailwindcss:install
 ```
@@ -245,7 +245,7 @@ Introducing... [reality_tailwindcss](https://github.com/Lomig/reality_tailwindcs
 But it works!
 
 And we get the smooth Rails experience:
-```Console
+```console
 opam pin reality_tailwindcss.1.0.0 git+https://github.com/Lomig/reality_tailwindcss.git#main
 reality_tailwindcss install
 ```
