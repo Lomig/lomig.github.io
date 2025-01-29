@@ -85,7 +85,7 @@ let () =
   * `let* x = ... in` is a binding operator; its JS equivalent would be `const x = await ...`
   * `Lwt_` methods are used in place of their synchronous counterparts
 
-> Note: The script is designed to work for macOS (arm64 and x64), Linux (x86_64 and arm64), and Windows. If you find any issues with any OS/CPU combinations, feel free to suggest corrections.
+> Note: The script is designed to work for macOS (arm64 and x64), probably Linux (x86_64 and arm64), but Windows is an afterthought. If you find any issues with any OS/CPU combinations, feel free to suggest corrections.
 {: .prompt-warning }
 
 ### Adding to the Build Configuration
