@@ -506,6 +506,9 @@ let render data =
 ```
 {: file="lib/server/templates/games/show.eml.html" }
 
+> [commit e2e0e17](https://github.com/Lomig/quest_complete/tree/e2e0e17f84105cc2804e4fd0d8ed7d8dc0f6e2ca)
+{: .prompt-tip }
+
 ## Next Steps
 
 At this stage, we have everything needed to build a functional website — routes, data persistence, and basic rendering. However, there’s still a lot to refine:
