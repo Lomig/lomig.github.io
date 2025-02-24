@@ -506,7 +506,7 @@ let render data =
 ```
 {: file="lib/server/templates/games/show.eml.html" }
 
-> [commit e2e0e17](https://github.com/Lomig/quest_complete/tree/e2e0e17f84105cc2804e4fd0d8ed7d8dc0f6e2ca)
+> [commit 8d0609f](https://github.com/Lomig/quest_complete/tree/8d0609f5a2c14f02afa273ce4434774b5bbe42fb)
 {: .prompt-tip }
 
 ## Next Steps

@@ -8,6 +8,9 @@ series: Building a Website with OCaml and Dream
 series_description: Learn how to build a modular website using OCaml and Dream.
 date: 2025-01-29 19:56 +0100
 ---
+## Updates
+* _2025-02-25_: Fix TailwindCSS CLI download for Windows installations
+
 ## Series
 {% series %}
 
@@ -85,8 +88,17 @@ let () =
   * `let* x = ... in` is a binding operator; its JS equivalent would be `const x = await ...`
   * `Lwt_` methods are used in place of their synchronous counterparts
 
-> Note: The script is designed to work for macOS (arm64 and x64), probably Linux (x86_64 and arm64), but Windows is an afterthought. If you find any issues with any OS/CPU combinations, feel free to suggest corrections.
+> Windows (non-WSL) users cannot use this approach to detect the right version. You can either hardcode the version or use a different method to detect the system, like below:
 {: .prompt-warning }
+```ocaml
+let system_to_version () =
+  match Sys.os_type with
+  | "Win32"  -> "tailwindcss-windows-x64.exe"
+  | "Unix"   -> "tailwindcss-linux-x64"
+  | "Cygwin" -> "tailwindcss-windows-x64.exe"
+  | _        -> "tailwindcss-windows-x64.exe"
+;;
+```
 
 ### Adding to the Build Configuration
 Update your `dune` file to include this new script:
@@ -240,6 +252,7 @@ Or is it?
 
 Introducing... [reality_tailwindcss](https://github.com/Lomig/reality_tailwindcss).
 * It goes with `Dream`, hence the name.
+* It should work for MacOS, Linux and Windows alike.
 * It is opiniated, as it uses the structure I settled upon in this blog (`lib/{client;server};static`{: .filepath})
 * There's no unit nor integration tests yet.
 But it works!

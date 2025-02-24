@@ -8,6 +8,9 @@ category: Functional Programming
 series: Building a Website with OCaml and Dream
 series_description: Learn how to build a modular website using OCaml and Dream.
 ---
+## Updates
+* _2025-02-25_: Add a workaround for an issue with pure Windows installations
+
 ## Series
 {% series %}
 
@@ -107,6 +110,24 @@ Here's the content of the dune-project file with some basic information filled i
 
 > [commit 85e5867](https://github.com/Lomig/quest_complete/tree/85e5867a8cf38c2879360e32b7594946810ca2c8)
 {: .prompt-tip }
+
+> The following paragraph is for Windows (non-WSL) users only.
+{: .prompt-warning }
+
+You may encounter a SSL error when trying to install the dependencies. To fix this, add this file to your project root:
+
+```lisp
+(lang dune 3.17)
+
+(context
+ (default
+  (paths
+   (PATH
+    "C:\\Users\\YOUR_USER_NAME\\AppData\\Local\\opam\\.cygwin\\root\\bin"
+    (:standard \ "C:\\WINDOWS\\system32")))))
+```
+{: file="dune-workspace" }
+
 
 ### Setting Up a Basic Web Server
 
