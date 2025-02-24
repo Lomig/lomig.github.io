@@ -8,6 +8,9 @@ series: Building a Website with OCaml and Dream
 series_description: Learn how to build a modular website using OCaml and Dream.
 date: 2025-01-29 19:56 +0100
 ---
+## Updates
+* _2025-02-24_: Fix TailwindCSS CLI download for Windows installations
+
 ## Series
 {% series %}
 
@@ -42,7 +45,10 @@ let system_to_version () =
     "tailwindcss-linux-x64"
   | { ExtUnix.All.Uname.sysname = "Linux"; machine = "aarch64"; _ } ->
     "tailwindcss-linux-arm64"
-  | _ -> "tailwindcss-windows-x64.exe"
+  | _ ->
+    (match Sys.os_type with
+     | "Unix" -> "tailwindcss-linux-x64"
+     | _ -> "tailwindcss-windows-x64.exe")
 ;;
 
 let rec download_with_redirects ~max_redirects uri target =
