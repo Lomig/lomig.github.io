@@ -330,7 +330,7 @@ As the project grows, I’ve been thinking about its structure:
 * There are quite a few folders now.
 * I like to keep things organized, and since we’re working exclusively with OCaml now, do we really need a strict separation between `views` and `templates`?
 * If everything is under `views`, I don’t want to mix conceptual structures like `components` or `layouts` with domain-related folders like `games` or `users`.
-* Alphabetical ordering isn’t always the best for semantic organization. In Rails, an underscore at the beginning of a folder name prevents it from being picked up by the framework. I’ll mimic this behavior to improve file organization fro, the `dune` files.
+* Alphabetical ordering isn’t always the best for semantic organization. In Rails, an underscore at the beginning of a folder name is ignored by the framework while removing it from the alphabetical sorting. I’ll mimic this behavior to improve file organization fro, the `dune` files.
 
 *(I don’t have a clean solution for `dune` files themselves yet, so if anyone has ideas, I’d love to hear them!)*
 
