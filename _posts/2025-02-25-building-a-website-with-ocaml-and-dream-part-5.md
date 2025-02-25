@@ -757,7 +757,7 @@ And that’s it! 🚀
 As always, I have plenty of ideas, and I rarely end up following my own roadmap—but that’s half the fun, right? That said, there are still a few critical pieces to tackle before I can call this a functional proto-framework:
 
 * **WebSockets** – Real-time functionality is essential for many modern web applications, and I’ll need to explore the best way to integrate it into my setup.
-* **Authentication** – WebAuthn is already in place, but there are still improvements to be made for a seamless authentication flow.
+* **Authentication** – WebAuthn is already in the work, but there are still improvements to be made for a seamless authentication flow.
 * **Database Migrations** – Managing schema changes effectively is a must-have for any serious web project.
 
 Once these are in place, I’ll have a strong foundation to build on. Whether this eventually turns into a full-fledged framework or just a personal toolkit remains to be seen, but one thing is certain—I’m enjoying the process!
